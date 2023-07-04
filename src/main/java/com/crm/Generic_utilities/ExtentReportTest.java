@@ -19,6 +19,7 @@ ExtentTest test;
 	public void onTestFailure(ITestResult tr) {
 		// TODO Auto-generated method stub
 		super.onTestFailure(tr);
+		
 	}
 
 	@Override

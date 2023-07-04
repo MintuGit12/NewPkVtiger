@@ -27,7 +27,7 @@ public void validationOfPage(WebDriver driver,String val)
 	System.out.println(val1);
 	char[] c=val1.toCharArray();
 	String st="";
-	for(int i=0;i<c.length;i++)
+for(int i=0;i<c.length;i++)
 	{
 if(c[i]!=' ')
 	st=st+c[i];

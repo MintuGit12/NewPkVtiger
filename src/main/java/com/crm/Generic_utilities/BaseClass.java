@@ -44,14 +44,15 @@ public void BT()
 {	
 		//System.out.println("run in parellel mode");
 }
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass(groups = {"smokeTest","regressionTest"})
 	//public void BC(String browser) throws IOException//for cross browser tessting
 public void BC() throws IOException
 { 
 		 File_Utility flib=new File_Utility();
-		String browser = System.getProperty("browser");
-			//String browser=flib.getPropertyKeyValue("browser");
+		//String browser = System.getProperty("browser");
+			String browser=flib.getPropertyKeyValue("browser");
+		
 if(browser.equalsIgnoreCase("chrome"))
 {
 	WebDriverManager.chromedriver().setup();
@@ -86,7 +87,10 @@ public void BM() throws IOException
 		login.login(un,pw);
 }
 	
-	@AfterMethod(groups = {"smokeTest","regressionTest"})
+	/**
+	 * 
+	 */
+@AfterMethod(groups = {"smokeTest","regressionTest"})
 public void AM()
 {
 		HomePage home=new HomePage(driver);

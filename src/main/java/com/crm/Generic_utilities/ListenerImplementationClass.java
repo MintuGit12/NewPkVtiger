@@ -48,6 +48,8 @@ public ExtentTest test;
 			
 			Thread.sleep(3000);
 			test.log(LogStatus.FAIL,test.addScreenCapture(path+" test is getting failed"));
+			//.setDescription("<a href=\"‪C:\\Users\\Adarsh\\Desktop\\Screenshot.jpeg.png\" target=\"_blank\">Screenshot Link</a>")
+			test.log(LogStatus.FAIL, "<a href=\"‪C:\\Users\\Adarsh\\Desktop\\Screenshot.jpeg.png\" target=\"_blank\">Screenshot Link</a>");
 			
 	}
 		catch(Exception e)
